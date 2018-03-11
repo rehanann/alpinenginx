@@ -18,14 +18,15 @@
  - ansible-playbook -i  hosts.yml playbook.yml exit
    
 **Docker startup**
-vagrant docbox
-docker run -it -p 80:80 -p 443:443 --ip 172.18.0.22 alpinenginx:latest
+
+ - vagrant docbox
+ - docker run -it -p 80:80 -p 443:443 --ip 172.18.0.22 alpinenginx:latest
 
 **Host Testing:** 
-docker build -t alpine37nginx:latest . 
-docker run --it -p 80:80 -p 443:443 alpinenginx:latest docker ps
+ - docker build -t alpine37nginx:latest . 
+ - docker run --it -p 80:80 -p 443:443 alpinenginx:latest docker ps
 
 **task need to be done:** 
-fix nfs issue while provisioning vagrant vm's. 
-fix docker container network to reach from network. 
-test the ansible playbooks.
+ - fix nfs issue while provisioning vagrant vm's. 
+ - fix docker container network to reach from network.
+ -  test the ansible playbooks.
