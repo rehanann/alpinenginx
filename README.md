@@ -1,22 +1,22 @@
 **What is required.**
 
-Vagrant 
-Virtualbox 
-Git
+ - Vagrant  
+ - Virtualbox 
+ -  Git
 
 **Vargrant box startup procedure**
 
-vagrant init geerlingguy/centos7 
-vagrant up 
-vagrant status # check the boxes are running
+ - vagrant init geerlingguy/centos7  
+ - vagrant up  vagrant status 
+ - check the boxes are running
 
 **Ansible provisoning**
-vagrant scp playbook.yml, hosts.yml, Dockerfile ansibox
-vagrant ssh ansibox 
-ansible docbox -i host.yml -m ping
-ansible-playbook -i hosts.yml playbook.yml
-exit
 
+ - vagrant scp playbook.yml, hosts.yml, Dockerfile ansibox 
+ - vagrant ssh ansibox
+ - ansible docbox -i host.yml -m ping 
+ - ansible-playbook -i  hosts.yml playbook.yml exit
+   
 **Docker startup**
 vagrant docbox
 docker run -it -p 80:80 -p 443:443 --ip 172.18.0.22 alpinenginx:latest
