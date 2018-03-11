@@ -1,0 +1,13 @@
+---
+
+- name: Docker_Build
+  hosts: docbox
+  become: yes
+  tasks:
+  - name: Build docker container
+    docker_image: >
+      name=alpinenginx
+      tag=latest
+      path=/tmp/alpinenginx
+      state=present
+    when: sync_result.changed
